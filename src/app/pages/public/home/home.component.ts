@@ -9,13 +9,12 @@ import {MapComponent} from "../../../shared/components/map/map.component";
 import {MatIconModule} from '@angular/material/icon';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CardComponent, FooterComponent, MapComponent, MatIconModule],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-home',
+    imports: [CardComponent, FooterComponent, MapComponent, MatIconModule],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent {
   view: string = 'home'

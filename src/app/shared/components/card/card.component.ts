@@ -5,10 +5,10 @@ import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-card',
-  standalone: true,
   imports: [MatIconModule],
   providers: [CommonModule],
   templateUrl: './card.component.html',
+  standalone: true,
   styleUrl: './card.component.scss'
 })
 export class CardComponent {

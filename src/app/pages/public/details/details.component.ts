@@ -3,11 +3,10 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {switchMap} from "rxjs";
 
 @Component({
-  selector: 'app-details',
-  standalone: true,
-  imports: [],
-  templateUrl: './details.component.html',
-  styleUrl: './details.component.scss'
+    selector: 'app-details',
+    imports: [],
+    templateUrl: './details.component.html',
+    styleUrl: './details.component.scss'
 })
 export class DetailsComponent implements OnInit {
     private readonly route = inject(ActivatedRoute);
