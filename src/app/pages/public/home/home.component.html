@@ -1,0 +1,31 @@
+<div class="w-full">
+
+  <div class=" layout flex justify-end">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+
+    <button class="py-2 px-5 border border-gray-300 rounded-xl">
+      Filtre
+    </button>
+  </div>
+
+  @if (view == 'home') {
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 layout">
+      @for (card of cards; track $index) {
+        <app-card [data]="card" (click)="goToDetails(card.id)"></app-card>
+      }
+    </div>
+  }
+  @else {
+    <div class="layout w-full h-full">
+      <app-map></app-map>
+    </div>
+  }
+
+  <div class="bg-transparent fixed bottom-5 left-1/2 right-1/2  w-full cursor-pointer" (click)="changeView()">
+    <span class="bg-[#1F4B43] rounded-full py-2 px-5 text-white">{{ btn }}</span>
+  </div>
+
+    <div class="">
+        <app-footer></app-footer>
+    </div>
+</div>

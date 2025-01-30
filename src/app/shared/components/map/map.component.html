@@ -1,0 +1,16 @@
+<div class="h-full w-full">
+  <google-map
+    width="100%"
+
+    [center]="center"
+    [zoom]="zoom"
+    [mapTypeId]="mapType"
+    (mapClick)="moveMap($event)"
+    (mapMousemove)="move($event)">
+    @for (marker of markers; track $index) {
+      <map-marker [position]="marker.position" [title]="marker.title" [icon]="marker.icon" (mapClick)="toggleBounce(marker)"></map-marker>
+    }
+  </google-map>
+<!--  <div>Latitude: {{display?.lat}}</div>-->
+<!--  <div>Longitude: {{display?.lng}}</div>-->
+</div>
