@@ -2,10 +2,12 @@ import { CommonModule, CurrencyPipe } from '@angular/common';
 import { Component, inject, Input } from '@angular/core';
 import { ICard } from '../../interfaces/ICard';
 import { MatIconModule } from '@angular/material/icon';
+import {MatButton, MatIconButton} from "@angular/material/button";
+import {MatTooltip} from "@angular/material/tooltip";
 
 @Component({
   selector: 'app-card',
-  imports: [MatIconModule],
+  imports: [MatIconModule, MatButton, MatIconButton, MatTooltip],
   providers: [CommonModule],
   templateUrl: './card.component.html',
   standalone: true,

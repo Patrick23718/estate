@@ -1,3 +1,4 @@
+<app-header></app-header>
 <div class="w-full">
 
   <div class="layout flex justify-end pb-3">
@@ -22,8 +23,8 @@
     </div>
   }
 
-  <div class="bg-transparent fixed bottom-5 left-1/2 right-1/2  w-full cursor-pointer" (click)="changeView()">
-    <span class="bg-[#1F4B43] rounded-full py-2 px-5 text-white">{{ btn }}</span>
+  <div class="bg-transparent fixed bottom-5 w-full flex justify-center" (click)="changeView()">
+    <span class="bg-[#1F4B43] rounded-full py-2 px-5 cursor-pointer text-white flex items-center gap-2">{{ btn }} <mat-icon>{{icon}}</mat-icon></span>
   </div>
 
     <div class="">

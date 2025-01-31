@@ -7,10 +7,11 @@ import {Router} from "@angular/router";
 import {MapComponent} from "../../../shared/components/map/map.component";
 
 import {MatIconModule} from '@angular/material/icon';
+import {HeaderComponent} from "../../../shared/components/header/header.component";
 
 @Component({
   selector: 'app-home',
-  imports: [CardComponent, FooterComponent, MapComponent, MatIconModule],
+  imports: [CardComponent, FooterComponent, MapComponent, MatIconModule, HeaderComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
@@ -20,6 +21,7 @@ import {MatIconModule} from '@angular/material/icon';
 export class HomeComponent {
   view: string = 'home'
   btn: string = 'Afficher la carte'
+  icon: string = 'list_outline'
   constructor(private router: Router) {}
 
   goToDetails(id: string): void {
@@ -30,9 +32,11 @@ export class HomeComponent {
     if (this.view === 'home') {
       this.view = 'map';
       this.btn = 'Afficher la liste';
+      this.icon = 'list_outline';
     }else{
       this.view = 'home';
       this.btn = 'Afficher la carte';
+      this.icon = 'map_outline';
     }
   }
 
