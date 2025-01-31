@@ -51,24 +51,24 @@
 
 
   <div class="grid rounded-2xl gap-2 w-full overflow-hidden grid-cols-4">
-    <div class="col-span-2 overflow-hidden">
-      <img src="images/1.png" alt="" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-125">
+    <div class="col-span-2 overflow-hidden aspect-19/12">
+      <img [src]="card!.images[0]" alt="" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-125">
     </div>
     <div class="overflow-hidden flex flex-col gap-2">
-      <div class="overflow-hidden">
-        <img src="images/2.png" alt="" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-125">
+      <div class="overflow-hidden aspect-19/12">
+        <img [src]="card!.images[1]" alt="" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-125">
       </div>
-      <div class="overflow-hidden">
-        <img src="images/3.png" alt="" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-125">
+      <div class="overflow-hidden aspect-19/12">
+        <img [src]="card!.images[2]" alt="" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-125">
       </div>
     </div>
 
     <div class="overflow-hidden flex flex-col gap-2">
-      <div class="overflow-hidden">
-        <img src="images/4.png" alt="" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-125">
+      <div class="overflow-hidden aspect-19/12">
+        <img [src]="card!.images[3]" alt="" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-125">
       </div>
-      <div class="overflow-hidden">
-        <img src="images/5.png" alt="" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-125">
+      <div class="overflow-hidden aspect-19/12">
+        <img [src]="card!.images[3]" alt="" class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-125">
       </div>
     </div>
 
@@ -79,10 +79,10 @@
     <div class="col-span-7 md:col-span-5 space-y-10">
       <div class="flex flex-col md:flex-row md:justify-between mb">
         <div class="flex flex-col space-y-2">
-          <h1 class="text-2xl font-semibold">New Apartment Nice Wiew</h1>
+          <h1 class="text-2xl font-semibold">{{card?.title}}</h1>
           <p class="flex items-center font-light">
             <mat-icon>location_on_outline</mat-icon>
-            <span> 42 Avenue O, Brooklyn</span>
+            <span>{{card!.location}}</span>
           </p>
         </div>
         <div class="flex flex-col space-y-2">
@@ -90,7 +90,7 @@
             $2 / sqft
           </p>
           <span class="flex items-end">
-            <h1 class="text-2xl font-semibold">$850</h1>
+            <h1 class="text-2xl font-semibold">$ {{card!.price}}</h1>
             <p> / month</p>
           </span>
         </div>
